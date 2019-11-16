@@ -1,11 +1,21 @@
 package com.me.LHCheckstyle.checks;
 import com.puppycrawl.tools.checkstyle.api.*;
 
-public class MethodLimitCheck extends Check {
+public class MethodLimitCheck extends AbstractCheck {
 
     private int max = 1;
 
     public int[] getDefaultTokens() {
+        return new int[]{TokenTypes.CLASS_DEF, TokenTypes.INTERFACE_DEF};
+    }
+
+    @Override
+    public int[] getAcceptableTokens() {
+        return new int[]{TokenTypes.CLASS_DEF, TokenTypes.INTERFACE_DEF};
+    }
+
+    @Override
+    public int[] getRequiredTokens() {
         return new int[]{TokenTypes.CLASS_DEF, TokenTypes.INTERFACE_DEF};
     }
 

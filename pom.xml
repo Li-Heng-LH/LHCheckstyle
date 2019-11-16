@@ -17,11 +17,11 @@
     </properties>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/checkstyle/checkstyle -->
+        <!-- https://mvnrepository.com/artifact/com.puppycrawl.tools/checkstyle -->
         <dependency>
-            <groupId>checkstyle</groupId>
+            <groupId>com.puppycrawl.tools</groupId>
             <artifactId>checkstyle</artifactId>
-            <version>5.0</version>
+            <version>8.18</version>
         </dependency>
 
     </dependencies>
