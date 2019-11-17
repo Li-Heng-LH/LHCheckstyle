@@ -28,7 +28,9 @@ public class LogCheck extends AbstractCheck {
         for (int index = 0; index < fileText.size(); index++) {
             final String line = fileText.get(index);
             lineNo++;
-            log(lineNo, "hihi");
+            if (line.contains("LOGGER.")) {
+                log(lineNo, "This is a log message.");
+            }
         }
     }
 
