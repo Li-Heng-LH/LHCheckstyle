@@ -5,6 +5,7 @@ public class MethodLimitCheck extends AbstractCheck {
 
     private int max = 1;
 
+    @Override
     public int[] getDefaultTokens() {
         return new int[]{TokenTypes.CLASS_DEF, TokenTypes.INTERFACE_DEF};
     }
@@ -19,6 +20,7 @@ public class MethodLimitCheck extends AbstractCheck {
         return new int[]{TokenTypes.CLASS_DEF, TokenTypes.INTERFACE_DEF};
     }
 
+    @Override
     public void visitToken(DetailAST ast) {
 
         // find the OBJBLOCK node below the CLASS_DEF/INTERFACE_DEF
